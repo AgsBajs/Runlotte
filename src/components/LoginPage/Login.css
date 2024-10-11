@@ -1,0 +1,79 @@
+.wrapper {
+    width: 650px;
+    height: 650px;
+    background: transparent;
+    backdrop-filter: blur(50px);
+    border-radius: 30px;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .wrapper h1 {
+    font-size: 100px;
+    text-align: center;
+  }
+  
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    padding-left: 5%;
+}
+
+.input-box input::placeholder {
+    color: #fff;
+    font-size: 18px;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+}
+
+.wrapper .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20.5px;
+    margin: -5px 0 35px;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.wrapper button {
+    width: 100%;
+    height: 60px;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 25px;
+    font-weight:400;
+}
+
+.wrapper .register-link {
+    font-size: 20.5px;
+    text-align: center;
+    margin-top: 20px 0 15px;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
+  
