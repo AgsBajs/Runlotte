@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import Login from './components/LoginPage/Login'
-import './index.css'
+import Landing from './Components/Landing'
+import './App.css'
+import VideoBackground from './Components/VideoBackground'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -8,7 +9,8 @@ function App() {
   return (
     <>
       <div>
-        <Login />
+        <Landing />
+        < VideoBackground />
       </div>
     </>
   )
