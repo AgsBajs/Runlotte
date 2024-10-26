@@ -1,49 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
-const Card = () => {
+const Card = ({ onNavigate }) => {
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const handleClick = () => {
+    setIsAnimating(true);
+    // Trigger the navigation after the animation starts
+    onNavigate();
+  };
+
   return (
-    <StyledWrapper>
-      <div className="container noselect">
-        <div className="canvas">
-          <div className="tracker tr-1" />
-          <div className="tracker tr-2" />
-          <div className="tracker tr-3" />
-          <div className="tracker tr-4" />
-          <div className="tracker tr-5" />
-          <div className="tracker tr-6" />
-          <div className="tracker tr-7" />
-          <div className="tracker tr-8" />
-          <div className="tracker tr-9" />
-          <div className="tracker tr-10" />
-          <div className="tracker tr-11" />
-          <div className="tracker tr-12" />
-          <div className="tracker tr-13" />
-          <div className="tracker tr-14" />
-          <div className="tracker tr-15" />
-          <div className="tracker tr-16" />
-          <div className="tracker tr-17" />
-          <div className="tracker tr-18" />
-          <div className="tracker tr-19" />
-          <div className="tracker tr-20" />
-          <div className="tracker tr-21" />
-          <div className="tracker tr-22" />
-          <div className="tracker tr-23" />
-          <div className="tracker tr-24" />
-          <div className="tracker tr-25" />
-          {[...Array(25)].map((_, i) => (
-            <div key={i + 1} className={`tracker tr-${i + 1}`} />
-          ))}
-          <div id="card">
-            <p id="prompt">Let's Get <br /> Started!</p>
-            <div className="title">
-              CLICK ME!
-              <br />
-            </div>
-          </div>
-        </div>
-      </div>
-    </StyledWrapper>
+    <div
+      className={`card ${isAnimating ? 'animate' : ''}`}
+      onClick={handleClick}
+    >
+      {/* Your card content */}
+      <h2>Click me to go to Map</h2>
+    </div>
   );
 };
 
@@ -57,8 +32,8 @@ const StyledWrapper = styled.div`
 }
 
 .container:active {
-  width: 254px;
-  height: 190px;
+  width: 300px;
+  height: 150px;
 }
 
 #card {
@@ -406,5 +381,3 @@ const StyledWrapper = styled.div`
 `;
 
 export default Card;
-
-

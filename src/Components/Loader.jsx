@@ -1,7 +1,27 @@
 import React from "react";
 import styled from "styled-components";
+import Weather from "../components/weather";
+import { BrowserRouter, Routes, Route, Link, NavLink } from 'react-router-dom'
 
 const Loader = () => {
+  //  // location info [lot, lat]
+  //  const [location] = useState([-80.84309, 35.227207]); // Defined location as state
+  //  const [temp, setTemp] = useState(null);
+
+  //  useEffect(() => {
+  //    // Retrieve temperature using Weather component
+  //    const fetchWeather = async () => {
+  //      try {
+  //        const tempData = await Weather(location[1], location[0]); // Pass lat and lon to Weather
+  //        setTemp(tempData);  // Store temperature in state
+  //      } catch (error) {
+  //        console.error("Error fetching temperature:", error);
+  //      }
+  //    };
+
+  //    fetchWeather();
+  //  }, [location]);
+
   return (
     <StyledWrapper>
       <div className="container">
@@ -16,6 +36,8 @@ const Loader = () => {
           <span className="right-back" />
         </div>
         <p className="temp">59</p>
+        {/* <p className="temp">{temp ? `${temp} °C` : "Loading..."}</p> */}
+
       </div>
     </StyledWrapper>
   );
